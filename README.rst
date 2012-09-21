@@ -1,11 +1,18 @@
 Pygame and friends: a Buildout love story
 =========================================
 
-Once upon a time, there was a software build solution called Buildout
+Once upon a time, there was a software build solution called `Buildout`_
 and a Python library called `Pygame`_.  Originally, they didn't play well
 together, but eventually they got on well enough.
 
 This is their story...
+
+What the?
+---------
+
+This is a buildout configuration for building Pygame dependencies locally and
+installing Pygame. This configuration endeavours to eliminate the need to
+use system level libraries to get Pygame up and running.
 
 Rationale
 ---------
@@ -95,5 +102,6 @@ that ensures local lib directories take precedence over system directories.
 There's currently a pull request in over on Bitbucket to have this patch 
 accepted.
 
+.. _Buildout: http://buildout.org
 .. _Pygame: http://pygame.org/
 .. _autoenv: https://github.com/kennethreitz/autoenv
