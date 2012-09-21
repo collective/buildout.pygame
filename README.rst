@@ -83,9 +83,12 @@ Also, you need to have a source-code clone of pygame in your buildout's
     hg clone pygame https://bitbucket.org/davidjb/pygame
 
 or add the following to your ``mr.developer`` configuration for Buildout::
-    
+
     [sources]
     pygame = hg https://bitbucket.org/davidjb/pygame egg=false update=false
+
+In fact, if you use a section named ``sources`` for ``mr.developer``, we
+already include this line for you in the buildout.
 
 This special version of pygame features a local directory configuration fix
 that ensures local lib directories take precedence over system directories.
