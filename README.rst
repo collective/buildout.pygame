@@ -25,7 +25,7 @@ buildout exists.
 
 This buildout currently supports the ``Font``, ``Image`` and ``Mixer`` modules
 of Pygame. The extra Pygame dependencies this buildout currently supports are
-dpetailed as follows (excerpt from install process)::
+detailed as follows (excerpt from install process)::
 
     SDL     : found 1.2.15
     FONT    : found
@@ -46,7 +46,7 @@ Feel free to jump in and add support.
 Usage
 -----
 
-Extend the ``pygame.cfg`` file in your Buildout's ``extends`` and include
+Extend the ``pygame.cfg`` file in your buildout's ``extends`` and include
 ``${pygame:parts}`` in your ``parts`` option of ``[buildout]``, like so::
 
     [buildout]
@@ -54,6 +54,15 @@ Extend the ``pygame.cfg`` file in your Buildout's ``extends`` and include
     parts = 
         ${pygame:parts}
         ...
+
+This buildout provides an `autoenv`_ ``.env`` file into your buildout directory
+in case you need to have your library path environment variables adjusted to
+suit these newly compiled libraries, and/or have your PATH itself updated to
+know about the compiled executables.  If you don't have `autoenv`_ or don't
+want to use this, then you can always ``source`` the file like normal. In
+testing, however, it was only necessary to have the libraries present to have
+Pygame compile correctly - once compiled, it seemed to not care about not
+knowing where the C libraries were. YMMV.
 
 Requirements
 ------------
@@ -84,3 +93,4 @@ There's currently a pull request in over on Bitbucket to have this patch
 accepted.
 
 .. _Pygame: http://pygame.org/
+.. _autoenv: https://github.com/kennethreitz/autoenv
