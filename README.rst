@@ -2,7 +2,7 @@ Pygame and friends: a Buildout love story
 =========================================
 
 Once upon a time, there was a software build solution called Buildout
-and a Python library called Pygame.  Originally, they didn't play well
+and a Python library called `Pygame`_.  Originally, they didn't play well
 together, but eventually they got on well enough.
 
 This is their story...
@@ -10,7 +10,7 @@ This is their story...
 Rationale
 ---------
 
-Pygame is an interesting beast.  It uses a variety of platform-specific
+`Pygame`_ is an interesting beast.  It uses a variety of platform-specific
 configuration and egg setup generation techniques (that I really don't
 understand) and does a lot of things by hand.  This makes it somewhat difficult
 to play and deploy with.
@@ -83,3 +83,4 @@ that ensures local lib directories take precedence over system directories.
 There's currently a pull request in over on Bitbucket to have this patch 
 accepted.
 
+.. _Pygame: http://pygame.org/
