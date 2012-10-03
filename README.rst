@@ -11,8 +11,12 @@ What the?
 ---------
 
 This is a buildout configuration for building Pygame dependencies locally and
-installing Pygame. This configuration endeavours to eliminate the need to
-use system level libraries to get Pygame up and running.
+installing Pygame into your buildout environment. This configuration endeavours 
+to eliminate the need to use system level libraries to get Pygame up and running.
+This means you can integrate Pygame or something that needs Pygame (such as
+`PyTagCloud <https://github.com/atizo/PyTagCloud>`_) with whatever Python-based
+project (such as Plone, Pyramid, or more) that your heart desires.
+
 
 Rationale
 ---------
@@ -48,7 +52,7 @@ detailed as follows (excerpt from install process)::
     SWSCALE : not found
     FREETYPE: found 2.4.10
 
-Feel free to jump in and add support. 
+Feel free to jump in and add support for the bits that are marked as ``not found``. 
 
 Usage
 -----
